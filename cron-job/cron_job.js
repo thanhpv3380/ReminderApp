@@ -3,7 +3,7 @@ const sendEmail = require('../sendEmail/sendEmail');
 
 const cron_job  = () => {
     const job = new cron.CronJob({
-    cronTime: '* * * * * 0-6', // Chạy Jobs vào 1h30 am hằng đêm
+    cronTime: '00 00 6 * * 0-6', // Chạy Jobs vào 1h30 am hằng đêm
     onTick: function() {
         sendEmail();
         console.log('Cron jub runing...');

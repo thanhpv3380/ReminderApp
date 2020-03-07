@@ -17,7 +17,7 @@ const sendEmail = async () => {
             let currentDate = new Date();
             console.log(date);
             let diffTime = (currentDate.getTime() - date.getTime()) / (1000 * 60 * 60);
-            if (diffTime % 2 === 0) {
+            if (diffTime >= 2) {
                 console.log(diffTime);
                 //Get Variables from query string in the search bar
                 const recipient = debtors[i].email;
