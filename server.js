@@ -35,7 +35,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // connection db
-mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true}).then(db => console.log('DB is Connected'));
+mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true}).then(db => console.log('DB is Connected'));
 
 // // Welcome page of the express server: 
 app.get('/', (req, res) => {
